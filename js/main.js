@@ -1,22 +1,26 @@
-$(document).ready(function () {
+let appli = new Vue({
+  el: '#app',
+  data: {
+  	keyword: '',
+    Search: []
+  },
 
-	$('#search_button').click(function () {
-		let movie = $('#film').val();
-		let url = 'https://www.omdbapi.com/?s=' + movie;
+  methods: {
+  	rechercher: function(item){
+	let url = `https://www.omdbapi.com/?s=${this.keyword}`;
 
-
-		$.get(url, function (data) {
-			let results = data.Search
-			for (let i = 0; i < results.length; i++) {
-				$('#affichage').append(`<li>${results[i].Title}</li>`);
-				$('#affichage').append(`<li>${results[i].Type}</li>`);
-				$('#affichage').append(`<li>${results[i].Year}</li>`);
-				$('#affichage').append(`<li>${results[i].imdbID}</li>`);
-				$('#affichage').append(`<li>${results[i].Image}</li>`);
-			}
-
+	$.getJSON(url, function( data ) {
+		 appli.Search = data.Search;
+		 console.log(data.Search);
 		});
 
-	});
+
+}
+}
 
 });
+
+
+
+
+
