@@ -29,7 +29,7 @@
 
 		</div>
 	</div>
-  
+
 
     <li><h1>Results</h1></li>
 
@@ -41,6 +41,7 @@
 	 	<strong>{{item.Title}}</strong></br>
 	 		Year : {{item.Year}} </br>
 	 		Type : {{item.Type}}</br>
+
 	 		<span v-model="idkeyword"> ID : {{item.imdbID}}</span></br></br>
 	 		<a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>	 
 		
@@ -49,10 +50,18 @@
     </li>
 </div>
 
+
+<div id="keywordslist" class="row">
+	<h2>listes des mots-clés entrés</h2>
+	<ul></ul>
+</div>
+
+
 	<script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/vue@2.2.6"></script>
 	<script src="js/main.js"></script>
+	<script src="js/list.js"></script>
 
 </body>
 
