@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 					}
 				});
-			}, 1000);
+			}, 10000);
 
 
 	$('button').click(function(){
