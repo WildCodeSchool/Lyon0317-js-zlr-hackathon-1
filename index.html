@@ -55,10 +55,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<input v-model="keyword" id="film" type="text" class="form-control" placeholder="Rechercher un film" />
+				<input v-model="titlekeyword" id="film" type="text
+				" class="form-control" placeholder="Search movie by Title" />
+				<input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)" />
+				<input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
 			</div>
 			<div class="col-md-6">
-				<button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Rechercher</button>
+				<button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
 			</div>
 		</div>
 		<div id="affichage" class="row">
@@ -78,7 +81,7 @@
 	 		Year : {{item.Year}} </br>
 	 		Type : {{item.Type}}</br>
 	 		ID : {{item.imdbID}}</br></br>
-	 		<!-- <button v-on:click="expand(item)" type="button">More about this movie</button></br>  -->	 
+	 		<button v-on:click="expand(item)" type="button">More about this movie</button></br>	 
 		</p></li>
 		</div>
 
