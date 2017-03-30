@@ -4,6 +4,7 @@ let appli = new Vue({
   	titlekeyword: '',
   	typekeyword: '',
   	yearkeyword:'',
+  	idkeyword: '',
     Search: []
   },
 
@@ -15,10 +16,16 @@ let appli = new Vue({
 		 appli.Search = data.Search;
 		 console.log(data.Search);
 		});
+	}},
+	
+  	expand: function(item){
+	let url = `https://www.omdbapi.com/?i=${this.idkeyword}`; //cet url en lui-même marche
 
-
-}
-}
+	$.getJSON(url, function( data ) {
+		 appli.Search = data.Search;
+		 console.log(data.Search);
+		});
+	}
 
 });
 
