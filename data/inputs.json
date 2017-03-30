@@ -1,8 +1,12 @@
 {
   "inputs": [
     {
-      "keyword": "alien",
+      "film": "alien",
       "id": 1
+    },
+    {
+      "film": "House",
+      "id": 2
     }
   ]
 }

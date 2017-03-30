@@ -10,7 +10,7 @@ $(document).ready(function(){
 				$('ul').empty();
 				$.getJSON(listMovies).done(function(reponse){
 					for(let item of reponse) {
-						$('ul').append(`<li>${item.keyword}</li>`);
+						$('ul').append(`<li>${item.film}</li>`);
 
 					}
 				});
@@ -19,12 +19,12 @@ $(document).ready(function(){
 
 	$('button').click(function(){
 		// ajax en POST
-		let keyword = $('#keyword').val();
+		let film = $('#film').val();
 
 
 
 		//$.post permet d'envoyer derrière une URL mon nouveau commentaire
-		$.post('http:/localhost:3000/inputs', {keyword: keyword}).done(function(){
+		$.post('http:/localhost:3000/inputs', {film: film}).done(function(){
 
 
 			$('ul').empty();
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 			$.getJSON(listMovies).done(function(reponse){
 				for(let item of reponse) {
-					$('ul').append(`<li>${item.keyword}</li>`);
+					$('ul').append(`<li>${item.film}</li>`);
 
 				}
 			});
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				$('ul').empty();
 				$.getJSON(listMovies).done(function(reponse){
 					for(let item of reponse) {
-						$('ul').append(`<li>${item.keyword} ${item.type} ${item.year}</li>`);
+						$('ul').append(`<li>${item.film} ${item.type} ${item.year}</li>`);
 
 					}
 				});
@@ -75,14 +75,14 @@ $(document).ready(function(){
 
 	$('button').click(function(){
 		// ajax en POST
-		let keyword = $('#keyword').val();
+		let film = $('#film').val();
 		let type = $('#type').val();
 		let year = $('#year').val();
 
 
 
 		//$.post permet d'envoyer derrière une URL mon nouveau commentaire
-		$.post('http:/localhost:3000/inputs', {keyword: keyword, type: type, year: year}).done(function(){
+		$.post('http:/localhost:3000/inputs', {film: film, type: type, year: year}).done(function(){
 
 
 			$('ul').empty();
@@ -91,7 +91,7 @@ $(document).ready(function(){
 
 			$.getJSON(listMovies).done(function(reponse){
 				for(let item of reponse) {
-					$('ul').append(`<li>${item.keyword} ${item.type} ${item.year}</li>`);
+					$('ul').append(`<li>${item.film} ${item.type} ${item.year}</li>`);
 
 				}
 			});
