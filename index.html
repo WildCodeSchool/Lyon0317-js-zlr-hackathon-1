@@ -2,66 +2,67 @@
 <html lang="fr">
 
 <head>
-	<title></title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="css/style.css" rel="stylesheet">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="app">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<input v-model="titlekeyword" id="film" type="text
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <input v-model="titlekeyword" id="film" type="text
 				" class="form-control" placeholder="Search movie by Title" />
-				<input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)" />
-				<input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
-			</div>
-			<div class="col-md-6">
-				<button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
-			</div>
-		</div>
-		<div id="affichage" class="row">
+                    <input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)"
+                    />
+                    <input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
+                </div>
+                <div class="col-md-6">
+                    <button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
+                </div>
+            </div>
 
-		</div>
-	</div>
+            <li>
+                <h1>Results</h1>
+            </li>
 
+            <li v-for="item in Search">
 
-    <li><h1>Results</h1></li>
+                <div id="bloc">
+                    <img :src="item.Poster" id="poster" /></br>
 
-    <li v-for="item in Search">
+                    <strong>{{item.Title}}</strong></br>
+                    Year : {{item.Year}} </br>
+                    Type : {{item.Type}}</br>
 
-   	 	<div id="bloc">
-   	 	<img :src="item.Poster" id="poster"/></br>
+                    <span v-model="idkeyword"> ID : {{item.imdbID}}</span></br>
+                    </br>
+                    <a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>
 
-	 	<strong>{{item.Title}}</strong></br>
-	 		Year : {{item.Year}} </br>
-	 		Type : {{item.Type}}</br>
+                </div>
 
-	 		<span v-model="idkeyword"> ID : {{item.imdbID}}</span></br></br>
-	 		<a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>	 
-		
-		</div>
+            </li>
+        </div>
 
-    </li>
-</div>
-
-
-<div id="keywordslist" class="row">
-	<h2>listes des mots-clés entrés</h2>
-	<ul></ul>
-</div>
+    </div>
 
 
-	<script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://unpkg.com/vue@2.2.6"></script>
-	<script src="js/main.js"></script>
-	<script src="js/list.js"></script>
+    <div id="keywordslist" class="row">
+        <h2>listes des mots-clés entrés</h2>
+        <ul></ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.2.6"></script>
+    <script src="js/main.js"></script>
+    <script src="js/list.js"></script>
 
 </body>
 
