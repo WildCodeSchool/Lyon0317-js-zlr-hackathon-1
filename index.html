@@ -70,11 +70,18 @@
     <li><h1>Results</h1></li>
 
     <li v-for="item in Search">
+
+   	 	<div id="bloc">
+   	 	<img :src="item.Poster" id="poster"/></br>
+
 	 	<strong>{{item.Title}}</strong></br>
 	 		Year : {{item.Year}} </br>
-	 		Type : {{item.Type}}</br></br>
+	 		Type : {{item.Type}}</br>
+	 		ID : {{item.imdbID}}</br></br>
 	 		<!-- <button v-on:click="expand(item)" type="button">More about this movie</button></br>  -->	 
 		</p></li>
+		</div>
+
     </li>
 </div>
 
