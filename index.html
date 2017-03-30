@@ -12,53 +12,17 @@
 
 <body>
 
-<!--<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-            <div class="input-group" id="adv-search">
-                 parameter = t
-                <input type="text" class="form-control" placeholder="Search Movie by Title" />
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                  parameter = type 
-                                    <label for="filter"></label>
-                                    <select class="form-control">
-                                        <option value="0" selected>Film</option>
-                                        <option value="1">Series</option>
-                                        <option value="2">Episode of a Series</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    parameter = y 
-                                    <label for="contain"></label>
-                                    <input class="form-control" placeholder="Year released" type="text" />
-                                  </div>
-
-                                  <button type="submit" class="btn btn-primary">Advanced search <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </form>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-	</div>
-</div>-->
 <div id="app">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<input v-model="keyword" id="film" type="text" class="form-control" placeholder="Rechercher un film" />
+				<input v-model="titlekeyword" id="film" type="text
+				" class="form-control" placeholder="Search movie by Title" />
+				<input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)" />
+				<input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
 			</div>
 			<div class="col-md-6">
-				<button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Rechercher</button>
+				<button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
 			</div>
 		</div>
 		<div id="affichage" class="row">
@@ -78,8 +42,8 @@
 	 		Year : {{item.Year}} </br>
 	 		Type : {{item.Type}}</br>
 	 		ID : {{item.imdbID}}</br></br>
-	 		<!-- <button v-on:click="expand(item)" type="button">More about this movie</button></br>  -->	 
-		</p></li>
+	 		<button v-on:click="expand(item)" type="button">More about this movie</button></br>	 
+		
 		</div>
 
     </li>
