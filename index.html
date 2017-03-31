@@ -13,6 +13,9 @@
 <body>
     <div id="app">
         <div class="container">
+					<header>
+						<h1>my Wonderful Movie list</h1>
+					</header>
             <div class="row">
                 <div class="col-md-6">
                     <input v-model="titlekeyword" id="film" type="text" class="form-control" placeholder="Search movie by Title" />
@@ -24,26 +27,34 @@
                     <button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
                 </div>
             </div>
-            <div class="row">
-                <li>
-                    <h1>Results</h1>
-                </li>
-                <li v-for="item in Search">
-                    <div id="bloc">
-                        <img :src="item.Poster" id="poster" /></br>
-                        <strong>{{item.Title}}</strong></br>
-                        Year : {{item.Year}} </br>
-                        Type : {{item.Type}}</br>
-                        <span v-model="idkeyword"> ID : {{item.imdbID}}</span></br>
-                        </br>
-                        <a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>
-                    </div>
-                </li>
-            </div>
-            <div id="keywordslist" class="row">
-                <h2>listes des mots-clés entrés</h2>
-                <ul></ul>
-            </div>
+
+						<div class="row">
+							<div class="col-md-6">
+		            <h2>Results</h2>
+
+		            <li v-for="item in Search">
+
+		                <div id="bloc">
+		                    <img :src="item.Poster" id="poster" /></br>
+
+		                    <strong><h3>{{item.Title}}</h3></strong>
+		                    <div class="moviedata">Year : {{item.Year}} </br>
+		                    	Type : {{item.Type}}</br>
+													<span v-model="idkeyword"> ID : {{item.imdbID}}</span>
+												</div>
+		                    </br>
+		                    <a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>
+
+		                </div>
+
+		            </li>
+							</div>
+							<div id="keywordslist" class="col-md-6">
+				        <h2>Latest searches</h2>
+				        <ul></ul>
+							</div>
+				    </div>
+
         </div>
     </div>
 

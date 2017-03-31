@@ -1,5 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Pacifico);
+
+
 body {
-    padding-top: 60px;
+    font-family: 'Fjalla One', sans-serif;
+}
+header {
+  font-family: 'Pacifico', sans-serif;
+  color: #2d5596;
+  text-shadow: 2px 2px 4px #b6ccdb;
+  padding-bottom: 50px;
 }
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
@@ -39,7 +48,7 @@ li{
 /*    border: 1px solid red;
 */}
 
-#poster{    
+#poster{
     max-width: 300px;
     max-height: 300px;
     display: inline-flex;
@@ -71,3 +80,55 @@ li{
         min-width: 500px;
     }
 }
+
+.form-control {
+  background: #F7FCFF;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.moviedata {
+  padding-left: 10px;
+}
+
+
+/* ajout de minuit
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+*/
