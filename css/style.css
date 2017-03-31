@@ -45,8 +45,13 @@ li{
 
 #bloc{
     height:auto;
-/*    border: 1px solid red;
-*/}
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 0;
+}
 
 #poster{
     max-width: 300px;
@@ -54,18 +59,6 @@ li{
     display: inline-flex;
     clear: both;
     border: 1px solid black;
-}
-
-#more{
-    color: black;
-    border: 1px solid black;
-    padding: 2px;
-    text-decoration: none;
-}
-
-#more:hover{
-    color: green;
-    border: 1px solid green;
 }
 
 @media screen and (min-width: 768px) {

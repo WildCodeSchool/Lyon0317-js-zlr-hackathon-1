@@ -39,23 +39,26 @@
 
                     <li v-for="item in Search">
 
-                        <div id="bloc">
-                            <img :src="item.Poster" id="poster" /></br>
+                        <div id="bloc" class="row">
+                            <div>
+                                <img :src="item.Poster" id="poster" class="col-lg-4" /></div>
 
-                            <strong><h3>{{item.Title}}</h3></strong>
-                            <div class="moviedata">Year : {{item.Year}} </br>
-                                Type : {{item.Type}}</br>
-                                <span v-model="idkeyword"> ID : {{item.imdbID}}</span>
+                            <div class="moviedata col-lg-8">
+                                <strong><h3>{{item.Title}}</h3></strong>
+                                <p>Year : {{item.Year}} </p>
+                                <p>Type : {{item.Type}}</p>
+                                <p class="badge"> ID : {{item.imdbID}}</p>
+                                </br>
+                                <a id="more" class="btn btn-info" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a>
                             </div>
                             </br>
-                            <a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>
+
 
                         </div>
                     </li>
                 </div>
-
+                <h2>Latest searches</h2>
                 <div id="keywordslist" class="col-md-6">
-                    <h2>Latest searches</h2>
                     <ul></ul>
                 </div>
 
