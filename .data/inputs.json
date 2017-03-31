@@ -1,0 +1,40 @@
+{
+  "inputs": [
+    {
+      "film": "d",
+      "id": 1
+    },
+    {
+      "film": "a",
+      "id": 2
+    },
+    {
+      "film": "dd",
+      "id": 3
+    },
+    {
+      "film": "s",
+      "id": 4
+    },
+    {
+      "film": "d",
+      "id": 5
+    },
+    {
+      "film": "Hello",
+      "id": 6
+    },
+    {
+      "film": "lalaland",
+      "id": 7
+    },
+    {
+      "film": "Coucou",
+      "id": 8
+    },
+    {
+      "film": "good morning",
+      "id": 9
+    }
+  ]
+}

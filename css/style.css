@@ -91,6 +91,9 @@ li{
   padding-left: 10px;
 }
 
+#search_button{
+    width: 200px;
+}
 
 /* ajout de minuit
 .form {
