@@ -11,49 +11,58 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
-					<header>
-						<h1>my Wonderful Movie list</h1>
-					</header>
+
+    <div class="container">
+        <div id="app">
+            <header>
+                <h1>my Wonderful Movie list</h1>
+            </header>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <input v-model="titlekeyword" id="film" type="text" class="form-control" placeholder="Search movie by Title" />
+                </div>
+                <div class="col-md-3">
                     <input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)"
                     />
+                </div>
+                <div class="col-md-3">
                     <input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
                 </div>
             </div>
 
-						<div class="row">
-							<div class="col-md-6">
-		            <h2>Results</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Results</h2>
 
-		            <li v-for="item in Search">
+                    <li v-for="item in Search">
 
-		                <div id="bloc">
-		                    <img :src="item.Poster" id="poster" /></br>
+                        <div id="bloc" class="row">
+                            <div>
+                                <img :src="item.Poster" id="poster" class="col-lg-4" /></div>
 
-		                    <strong><h3>{{item.Title}}</h3></strong>
-		                    <div class="moviedata">Year : {{item.Year}} </br>
-		                    	Type : {{item.Type}}</br>
-													<span v-model="idkeyword"> ID : {{item.imdbID}}</span>
-												</div>
-		                    </br>
-		                    <a id="more" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a></br>
+                            <div class="moviedata col-lg-8">
+                                <strong><h3>{{item.Title}}</h3></strong>
+                                <p>Year : {{item.Year}} </p>
+                                <p>Type : {{item.Type}}</p>
+                                <p class="badge"> ID : {{item.imdbID}}</p>
+                                </br>
+                                <a id="more" class="btn btn-info" v-on:click="expand(item)" type="button" href="more.html">More about {{item.Title}}</a>
+                            </div>
+                            </br>
 
-		                </div>
 
-		            </li>
-							</div>
-							<div id="keywordslist" class="col-md-6">
-				        <h2>Latest searches</h2>
-				        <ul></ul>
-							</div>
-				    </div>
+                        </div>
+                    </li>
+                </div>
+                <h2>Latest searches</h2>
+                <div id="keywordslist" class="col-md-6">
+                    <ul></ul>
+                </div>
+
+            </div>
 
         </div>
     </div>
