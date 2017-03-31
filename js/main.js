@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	let appli = new Vue({
 		el: '#app',
 		data: {
