@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <div id="app">
         <div class="container">
 					<header>
@@ -19,8 +18,7 @@
 					</header>
             <div class="row">
                 <div class="col-md-6">
-                    <input v-model="titlekeyword" id="film" type="text
-				" class="form-control" placeholder="Search movie by Title" />
+                    <input v-model="titlekeyword" id="film" type="text" class="form-control" placeholder="Search movie by Title" />
                     <input v-model="typekeyword" id="" type="text" class="form-control" placeholder="Type: Movie, Series, Episode (Optional)"
                     />
                     <input v-model="yearkeyword" id="" type="" class="form-control" placeholder="Year of release (Optional)" />
@@ -29,6 +27,7 @@
                     <button id="search_button" type="button" class="btn btn-primary" v-on:click="rechercher(Search)">Search</button>
                 </div>
             </div>
+
 						<div class="row">
 							<div class="col-md-6">
 		            <h2>Results</h2>
@@ -56,9 +55,7 @@
 							</div>
 				    </div>
 
-
         </div>
-
     </div>
 
 
